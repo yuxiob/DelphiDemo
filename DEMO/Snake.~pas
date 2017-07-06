@@ -196,11 +196,7 @@ var
       timer2.Enabled := False;
       Form2.Show;
       end;
-
-
-  if x[10] <> 0 then
-  begin
-
+      
   if ((x[10] = a*10)and(y[10] = b*10)) then
     begin
       PaintBox1.Canvas.Brush.Color := clBtnFace;
@@ -209,6 +205,8 @@ var
       timer2.Enabled := true;
       end;
 
+  if x[10] <> 0 then
+  begin
   for i := 1 to 9 do
   if ((x[10] = x[i]) And (y[10] = y[i])) then
     begin

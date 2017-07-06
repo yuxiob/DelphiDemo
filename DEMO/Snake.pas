@@ -108,15 +108,15 @@ var
       PaintBox1.Canvas.Pen.Color := clBtnFace;
       PaintBox1.Canvas.Brush.Color := clBtnFace;
       paintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
-      for i := 1 to 9 do
+      for i := 1 to 9+sum do
         begin
           x[i] := x[i + 1];
           y[i] := y[i + 1];
         end;
-          x[10] := x[9] + 10;
-          y[10] := y[9];
+          x[10+sum] := x[9+sum] + 10;
+          y[10+sum] := y[9+sum];
           PaintBox1.Canvas.Brush.Color := clgreen;
-          PaintBox1.Canvas.Rectangle(x[10],y[10],x[10] + 10,y[10] + 10);
+          PaintBox1.Canvas.Rectangle(x[10+sum],y[10+sum],x[10+sum] + 10,y[10+sum] + 10);
       end;
 
   if (fx = 2) then //diretor is down;
@@ -124,15 +124,15 @@ var
       PaintBox1.Canvas.Pen.Color := clBtnFace;
       PaintBox1.Canvas.Brush.Color := clBtnFace;
       paintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
-      for i := 1 to 9 do
+      for i := 1 to 9+sum do
       begin
         x[i] := x[i + 1];
         y[i] := y[i + 1];
       end;
-      x[10] := x[9];
-      y[10] := y[9] + 10;
+      x[10+sum] := x[9+sum];
+      y[10+sum] := y[9+sum] + 10;
       PaintBox1.Canvas.Brush.Color := clgreen;
-      paintBox1.Canvas.Rectangle(x[10],y[10],x[10]+10,y[10]+10);
+      paintBox1.Canvas.Rectangle(x[10+sum],y[10+sum],x[10+sum]+10,y[10+sum]+10);
     end;
 
   if (fx = 1) then //diretor is up;
@@ -140,15 +140,15 @@ var
     PaintBox1.Canvas.Pen.Color := clBtnFace;
     PaintBox1.Canvas.Brush.Color := clBtnFace;
     paintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
-    for i := 1 to 9 do
+    for i := 1 to 9+sum do
       begin
         x[i] := x[i + 1];
         y[i] := y[i + 1];
       end;
-      x[10] := x[9];
-      y[10] := y[9] - 10;
+      x[10+sum] := x[9+sum];
+      y[10+sum] := y[9+sum] - 10;
       PaintBox1.Canvas.Brush.Color := clgreen;
-      paintBox1.Canvas.Rectangle(x[10],y[10],x[10]+10,y[10]+10);
+      paintBox1.Canvas.Rectangle(x[10+sum],y[10+sum],x[10+sum]+10,y[10+sum]+10);
       end;
 
   if (fx = 3) then //diretor is left;
@@ -156,16 +156,16 @@ var
     PaintBox1.Canvas.Pen.Color := clBtnFace;
     PaintBox1.Canvas.Brush.Color := clBtnFace;
     paintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
-    for i := 1 to 9 do
+    for i := 1 to 9+sum do
       begin
         x[i] := x[i + 1];
         y[i] := y[i + 1];
       end;
-      x[10] := x[9] - 10;
-      y[10] := y[9];
+      x[10+sum] := x[9+sum] - 10;
+      y[10+sum] := y[9+sum];
       PaintBox1.Canvas.Brush.Color := clgreen;
       PaintBox1.Canvas.Pen.Color := clBtnFace;
-      paintBox1.Canvas.Rectangle(x[10],y[10],x[10]+10,y[10]+10);
+      paintBox1.Canvas.Rectangle(x[10+sum],y[10+sum],x[10+sum]+10,y[10+sum]+10);
   end;
 
   ss3 := 0;
@@ -200,8 +200,13 @@ var
   if ((x[10] = a*10)and(y[10] = b*10)) then
     begin
       PaintBox1.Canvas.Brush.Color := clBtnFace;
-      PaintBox1.Canvas.Rectangle(a,b,a+10,b+10);
+      PaintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
       inc(sum);
+      for i := 1 to 9+sum do
+      begin
+        x[11+sum-i] := x[10+sum-i];
+        y[11+sum-i] := y[10+sum-i];
+      end;
       timer2.Enabled := true;
       end;
 
