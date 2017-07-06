@@ -89,7 +89,7 @@ procedure TForm1.N4Click(Sender: TObject);
   sum := 0;
     PaintBox1.Canvas.Pen.Color := clBtnFace;
     PaintBox1.Canvas.Brush.Color := clBtnFace;
-    PaintBox1.Canvas.Rectangle(0,0,270,380);
+    PaintBox1.Canvas.Rectangle(0,0,280,390);
     Timer2.Enabled := True;
     for i := 1 to 10 do
     begin
@@ -232,10 +232,13 @@ procedure TForm1.Timer2Timer(Sender: TObject);
   a := random(37);
   b := random(26);
   begin
+  if x[1]<>0 then
+  begin
   PaintBox1.Canvas.Brush.Color := clRed;
   PaintBox1.Canvas.Rectangle(a*10,b*10,a*10+10,b*10+10);
   Label5.Caption := IntToStr(sum);
   Timer2.Enabled := false;
+  end;
   end
 end;
 

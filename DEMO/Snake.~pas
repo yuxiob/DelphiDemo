@@ -176,32 +176,32 @@ var
   ss4 := 380;
   ss1 := 0;
   ss2 := 270;
-  if (x[10] < ss3) then
+  if (x[10+sum] < ss3) then
     begin
       Timer1.Enabled := False;
       timer2.Enabled := False;
       Form2.Show;
       end;
-  if (x[10] > ss4 - 10) then
+  if (x[10+sum] > ss4 - 10) then
     begin
       Timer1.Enabled := False;
       timer2.Enabled := False;
       Form2.Show;
       end;
-  if (y[10] < ss1) then
+  if (y[10+sum] < ss1) then
     begin
       Timer1.Enabled := False;
       timer2.Enabled := False;
       Form2.Show;
       end;
-  if (y[10] > ss2 - 10) then
+  if (y[10+sum] > ss2 - 10) then
     begin
       Timer1.Enabled := False;
       timer2.Enabled := False;
       Form2.Show;
       end;
       
-  if ((x[10] = a*10)and(y[10] = b*10)) then
+  if ((x[10+sum] = a*10)and(y[10+sum] = b*10)) then
     begin
       PaintBox1.Canvas.Brush.Color := clBtnFace;
       PaintBox1.Canvas.Rectangle(x[1],y[1],x[1]+10,y[1]+10);
@@ -214,10 +214,10 @@ var
       timer2.Enabled := true;
       end;
 
-  if x[10] <> 0 then
+  if x[10+sum] <> 0 then
   begin
   for i := 1 to 9 do
-  if ((x[10] = x[i]) And (y[10] = y[i])) then
+  if ((x[10+sum] = x[i]) And (y[10+sum] = y[i])) then
     begin
       Timer1.Enabled := False;
       timer2.Enabled := False;
@@ -232,10 +232,13 @@ procedure TForm1.Timer2Timer(Sender: TObject);
   a := random(37);
   b := random(26);
   begin
+  if x[1]<>0 then
+  begin
   PaintBox1.Canvas.Brush.Color := clRed;
   PaintBox1.Canvas.Rectangle(a*10,b*10,a*10+10,b*10+10);
   Label5.Caption := IntToStr(sum);
   Timer2.Enabled := false;
+  end;
   end
 end;
 

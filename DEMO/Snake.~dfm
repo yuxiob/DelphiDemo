@@ -38,7 +38,7 @@ object Form1: TForm1
   object Label4: TLabel
     Left = 16
     Top = 296
-    Width = 41
+    Width = 36
     Height = 13
     Caption = #24471#20998#65306
   end
