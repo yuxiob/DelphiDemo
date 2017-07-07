@@ -89,7 +89,7 @@ procedure TForm1.N4Click(Sender: TObject);
   sum := 0;
     PaintBox1.Canvas.Pen.Color := clBtnFace;
     PaintBox1.Canvas.Brush.Color := clBtnFace;
-    PaintBox1.Canvas.Rectangle(0,0,270,380);
+    PaintBox1.Canvas.Rectangle(0,0,280,390);
     Timer2.Enabled := True;
     for i := 1 to 10 do
     begin

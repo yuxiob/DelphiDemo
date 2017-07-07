@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 191
-  Top = 130
+  Left = 526
+  Top = 163
   Width = 411
   Height = 431
   Caption = 'Form1'
@@ -14,27 +14,6 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 96
-    Top = 200
-    Width = 32
-    Height = 13
-    Caption = 'Label1'
-  end
-  object Label2: TLabel
-    Left = 104
-    Top = 208
-    Width = 32
-    Height = 13
-    Caption = 'Label1'
-  end
-  object Label3: TLabel
-    Left = 112
-    Top = 216
-    Width = 32
-    Height = 13
-    Caption = 'Label1'
-  end
   object Label4: TLabel
     Left = 16
     Top = 296
@@ -48,6 +27,14 @@ object Form1: TForm1
     Width = 6
     Height = 13
     Caption = '0'
+  end
+  object PaintBox1: TPaintBox
+    Left = 0
+    Top = 0
+    Width = 393
+    Height = 281
+    ParentShowHint = False
+    ShowHint = False
   end
   object Button1: TButton
     Left = 160
@@ -84,19 +71,6 @@ object Form1: TForm1
     Caption = '&D right'
     TabOrder = 3
     OnClick = Button4Click
-  end
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 393
-    Height = 281
-    TabOrder = 4
-    object PaintBox1: TPaintBox
-      Left = 0
-      Top = 0
-      Width = 393
-      Height = 281
-    end
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

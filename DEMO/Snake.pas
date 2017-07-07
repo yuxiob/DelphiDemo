@@ -24,13 +24,9 @@ type
     N7: TMenuItem;
     N8: TMenuItem;
     About1: TMenuItem;
-    Panel1: TPanel;
-    PaintBox1: TPaintBox;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    PaintBox1: TPaintBox;
     procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure N4Click(Sender: TObject);
@@ -89,7 +85,7 @@ procedure TForm1.N4Click(Sender: TObject);
   sum := 0;
     PaintBox1.Canvas.Pen.Color := clBtnFace;
     PaintBox1.Canvas.Brush.Color := clBtnFace;
-    PaintBox1.Canvas.Rectangle(0,0,280,390);
+    PaintBox1.Canvas.Rectangle(0,0,393,281);
     Timer2.Enabled := True;
     for i := 1 to 10 do
     begin
