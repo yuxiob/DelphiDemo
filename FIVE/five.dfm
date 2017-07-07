@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 192
-  Top = 130
+  Left = 494
+  Top = 188
   Width = 434
   Height = 458
   Caption = #20116#23376#26827
@@ -44,9 +44,5 @@ object Form1: TForm1
       OnDrawCell = DrawGrid1DrawCell
       OnMouseDown = DrawGrid1MouseDown
     end
-  end
-  object Timer1: TTimer
-    Left = 136
-    Top = 120
   end
 end
